@@ -1,22 +1,24 @@
-# Build stage
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
+EXPOSE 5000
 
-# Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
+ENV ASPNETCORE_URLS=http://+:5000
 
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish -c Release -o out
+USER app
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG configuration=Release
+WORKDIR /src
+COPY ["e-shop-microservices/src/Services/Catalog/Catalog.Api/Catalog.Api.csproj", "e-shop-microservices/src/Services/Catalog/Catalog.Api/"]
+RUN dotnet restore "e-shop-microservices/src/Services/Catalog/Catalog.Api/Catalog.Api.csproj"
+COPY . .
+WORKDIR "/src/e-shop-microservices/src/Services/Catalog/Catalog.Api"
+RUN dotnet build "Catalog.Api.csproj" -c $configuration -o /app/build
 
-# Runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM build AS publish
+ARG configuration=Release
+RUN dotnet publish "Catalog.Api.csproj" -c $configuration -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
 WORKDIR /app
-COPY --from=build /app/out .
-
-# Expose ports
-EXPOSE 8080
-EXPOSE 8081
-
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Catalog.Api.dll"]
