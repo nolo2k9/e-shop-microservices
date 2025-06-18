@@ -1,24 +1,23 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
-EXPOSE 5000
 
-ENV ASPNETCORE_URLS=http://+:5000
+# Copy csproj files
+COPY src/Services/Catalog/Catalog.Api/Catalog.Api.csproj ./
+COPY src/BuildingBlocks/BuildingBlocks.csproj ../BuildingBlocks/
 
-USER app
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG configuration=Release
-WORKDIR /src
-COPY ["e-shop-microservices/src/Services/Catalog/Catalog.Api/Catalog.Api.csproj", "e-shop-microservices/src/Services/Catalog/Catalog.Api/"]
-RUN dotnet restore "e-shop-microservices/src/Services/Catalog/Catalog.Api/Catalog.Api.csproj"
-COPY . .
-WORKDIR "/src/e-shop-microservices/src/Services/Catalog/Catalog.Api"
-RUN dotnet build "Catalog.Api.csproj" -c $configuration -o /app/build
+# Restore dependencies
+RUN dotnet restore
 
-FROM build AS publish
-ARG configuration=Release
-RUN dotnet publish "Catalog.Api.csproj" -c $configuration -o /app/publish /p:UseAppHost=false
+# Copy the rest of the source code
+COPY src/Services/Catalog/Catalog.Api/. ./
+COPY src/BuildingBlocks ../BuildingBlocks
 
-FROM base AS final
+# Publish
+RUN dotnet publish -c Release -o out
+
+# Runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "Catalog.Api.dll"]

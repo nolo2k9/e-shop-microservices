@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  catalogdb:
+    image: postgres
+    container_name: catalogdb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=CatalogDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_catalog:/var/lib/postgresql/data/
+
+  catalog.api:
+    build:
+      context: .
+      dockerfile: src/Services/Catalog/Catalog.Api/Dockerfile
+    image: catalogapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__DatabaseConnection=Host=catalogdb;Port=5432;Database=CatalogDb;Username=postgres;Password=postgres
+    depends_on:
+      - catalogdb
+    ports:
+      - "5000:5000"
+    # Remove HTTPS and user secrets mounts for now, as they are not needed for HTTP-only dev
+
+volumes:
+  postgres_catalog:
