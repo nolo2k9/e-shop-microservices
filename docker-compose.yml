@@ -13,10 +13,15 @@ services:
       - "5432:5432"
     volumes:
       - postgres_catalog:/var/lib/postgresql/data/
-  
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
   basketdb:
     image: postgres
-    container_name: basketdb  # Lowercase to match service name
+    container_name: basketdb
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
@@ -26,7 +31,24 @@ services:
       - "5433:5432"
     volumes:
       - postgres_basket:/var/lib/postgresql/data/
-  
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  distributedcache:
+    image: redis
+    container_name: distributedcache
+    restart: always
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   catalog.api:
     build:
       context: .
@@ -37,9 +59,13 @@ services:
       - ASPNETCORE_URLS=http://+:5000
       - ConnectionStrings__DatabaseConnection=Host=catalogdb;Port=5432;Database=CatalogDb;Username=postgres;Password=postgres
     depends_on:
-      - catalogdb
+      catalogdb:
+        condition: service_healthy
     ports:
       - "5000:5000"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 
   basket.api:
     build:
@@ -48,12 +74,18 @@ services:
     image: basketapi
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:5051
-      - ConnectionStrings__Database=Host=basketdb;Port=5432;Database=BasketDb;Username=postgres;Password=postgres
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__Database=Host=basketdb;Port=5432;Database=basketdb;Username=postgres;Password=postgres  # Fixed: Use service name and internal port
+      - ConnectionStrings__Redis=distributedcache:6379,abortConnect=false  # Fixed: Changed to match appsettings.json
     depends_on:
-      - basketdb
+      basketdb:
+        condition: service_healthy
+      distributedcache:
+        condition: service_healthy
     ports:
-      - "5051:5051"
+      - "6001:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 
 volumes:
   postgres_catalog:

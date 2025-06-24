@@ -1,0 +1,38 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  basket.api:
+    build:
+      context: "/Users/KeithNolan/e-shop-microservices/e-shop-microservices"
+      dockerfile: "src/Services/Basket/Basket.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Basket.API.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "basketapi:dev"
+    ports: []
+    volumes:
+    - "/Users/KeithNolan/e-shop-microservices/e-shop-microservices/src/Services/Basket/Basket.API:/app:rw"
+    - "/Users/KeithNolan/e-shop-microservices/e-shop-microservices/src:/src:rw"
+    - "/Users/KeithNolan/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  catalog.api:
+    build:
+      context: "/Users/KeithNolan/e-shop-microservices/e-shop-microservices"
+      dockerfile: "src/Services/Catalog/Catalog.Api/Dockerfile"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Catalog.Api.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "catalogapi:dev"
+    ports: []
+    volumes:
+    - "/Users/KeithNolan/e-shop-microservices/e-shop-microservices/src/Services/Catalog/Catalog.Api:/app:rw"
+    - "/Users/KeithNolan/e-shop-microservices/e-shop-microservices/src:/src:rw"
+    - "/Users/KeithNolan/.nuget/packages:/root/.nuget/packages"
+    working_dir: "/app"
