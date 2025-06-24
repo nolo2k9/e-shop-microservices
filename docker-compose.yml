@@ -8,11 +8,25 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=CatalogDb
+    restart: always
     ports:
       - "5432:5432"
     volumes:
       - postgres_catalog:/var/lib/postgresql/data/
-
+  
+  basketdb:
+    image: postgres
+    container_name: basketdb  # Lowercase to match service name
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=basketdb
+    restart: always
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_basket:/var/lib/postgresql/data/
+  
   catalog.api:
     build:
       context: .
@@ -26,7 +40,21 @@ services:
       - catalogdb
     ports:
       - "5000:5000"
-    # Remove HTTPS and user secrets mounts for now, as they are not needed for HTTP-only dev
+
+  basket.api:
+    build:
+      context: .
+      dockerfile: src/Services/Basket/Basket.Api/Dockerfile
+    image: basketapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5051
+      - ConnectionStrings__Database=Host=basketdb;Port=5432;Database=BasketDb;Username=postgres;Password=postgres
+    depends_on:
+      - basketdb
+    ports:
+      - "5051:5051"
 
 volumes:
   postgres_catalog:
+  postgres_basket:
