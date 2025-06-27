@@ -4,6 +4,67 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A7C52B42-2A57-4ED3-B58B-F7540F49AC9D}"
+	ProjectSection(SolutionItems) = preProject
+		Services\Discount\Discount.Grpc\Discount.Grpc.csproj = Services\Discount\Discount.Grpc\Discount.Grpc.csproj
+		Services\Discount\Discount.Grpc\obj\Discount.Grpc.csproj.nuget.g.props = Services\Discount\Discount.Grpc\obj\Discount.Grpc.csproj.nuget.g.props
+		Services\Discount\Discount.Grpc\obj\Discount.csproj.nuget.g.targets = Services\Discount\Discount.Grpc\obj\Discount.csproj.nuget.g.targets
+		Services\Discount\Discount.Grpc\obj\Discount.csproj.nuget.g.props = Services\Discount\Discount.Grpc\obj\Discount.csproj.nuget.g.props
+		Services\Discount\Discount.Grpc\obj\project.nuget.cache = Services\Discount\Discount.Grpc\obj\project.nuget.cache
+		Services\Discount\Discount.Grpc\obj\Discount.Grpc.csproj.nuget.dgspec.json = Services\Discount\Discount.Grpc\obj\Discount.Grpc.csproj.nuget.dgspec.json
+		Services\Discount\Discount.Grpc\obj\project.assets.json = Services\Discount\Discount.Grpc\obj\project.assets.json
+		Services\Discount\Discount.Grpc\obj\Discount.csproj.nuget.dgspec.json = Services\Discount\Discount.Grpc\obj\Discount.csproj.nuget.dgspec.json
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.GeneratedMSBuildEditorConfig.editorconfig = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.GeneratedMSBuildEditorConfig.editorconfig
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Discount.Grpc.props = Services\Discount\Discount.Grpc\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Discount.Grpc.props
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\staticwebassets\msbuild.build.Discount.Grpc.props = Services\Discount\Discount.Grpc\obj\Debug\net8.0\staticwebassets\msbuild.build.Discount.Grpc.props
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Discount.Grpc.props = Services\Discount\Discount.Grpc\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Discount.Grpc.props
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\.NETCoreApp,Version = v8.0.AssemblyAttributes.cs = Services\Discount\Discount.Grpc\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.csproj.CoreCompileInputs.cache = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.csproj.CoreCompileInputs.cache
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\staticwebassets.build.json = Services\Discount\Discount.Grpc\obj\Debug\net8.0\staticwebassets.build.json
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\ref\Discount.Grpc.dll = Services\Discount\Discount.Grpc\obj\Debug\net8.0\ref\Discount.Grpc.dll
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Protos\GreetGrpc.cs = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Protos\GreetGrpc.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Protos\Greet.cs = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Protos\Greet.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.genruntimeconfig.cache = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.genruntimeconfig.cache
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.MvcApplicationPartsAssemblyInfo.cache = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.MvcApplicationPartsAssemblyInfo.cache
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\refint\Discount.Grpc.dll = Services\Discount\Discount.Grpc\obj\Debug\net8.0\refint\Discount.Grpc.dll
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\apphost = Services\Discount\Discount.Grpc\obj\Debug\net8.0\apphost
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.GlobalUsings.g.cs = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.GlobalUsings.g.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.dll = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.dll
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.assets.cache = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.assets.cache
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.sourcelink.json = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.sourcelink.json
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.AssemblyInfo.cs = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.AssemblyInfo.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\1255d1a520d30ea4_greet.protodep = Services\Discount\Discount.Grpc\obj\Debug\net8.0\1255d1a520d30ea4_greet.protodep
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.7F8E141D.Up2Date = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.7F8E141D.Up2Date
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.pdb = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.pdb
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.csproj.FileListAbsolute.txt = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.csproj.FileListAbsolute.txt
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.csproj.AssemblyReference.cache = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.csproj.AssemblyReference.cache
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.AssemblyInfoInputs.cache = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Discount.Grpc.AssemblyInfoInputs.cache
+		Services\Discount\Discount.Grpc\obj\Discount.Grpc.csproj.nuget.g.targets = Services\Discount\Discount.Grpc\obj\Discount.Grpc.csproj.nuget.g.targets
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc.runtimeconfig.json = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc.runtimeconfig.json
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.Net.Client.dll = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.Net.Client.dll
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.AspNetCore.Server.dll = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.AspNetCore.Server.dll
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc.deps.json = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc.deps.json
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Google.Protobuf.dll = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Google.Protobuf.dll
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.Net.Common.dll = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.Net.Common.dll
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\appsettings.json = Services\Discount\Discount.Grpc\bin\Debug\net8.0\appsettings.json
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.AspNetCore.Server.ClientFactory.dll = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.AspNetCore.Server.ClientFactory.dll
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc.dll = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc.dll
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.Core.Api.dll = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Grpc.Core.Api.dll
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\appsettings.Development.json = Services\Discount\Discount.Grpc\bin\Debug\net8.0\appsettings.Development.json
+		Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc.pdb = Services\Discount\Discount.Grpc\bin\Debug\net8.0\Discount.Grpc.pdb
+		Services\Discount\Discount.Grpc\appsettings.json = Services\Discount\Discount.Grpc\appsettings.json
+		Services\Discount\Discount.Grpc\Properties\launchSettings.json = Services\Discount\Discount.Grpc\Properties\launchSettings.json
+		Services\Discount\Discount.Grpc\appsettings.Development.json = Services\Discount\Discount.Grpc\appsettings.Development.json
+		Services\Discount\Discount.Grpc\Program.cs = Services\Discount\Discount.Grpc\Program.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\.NETCoreApp,Version = v8.0.AssemblyAttributes.cs = Services\Discount\Discount.Grpc\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Protos\DiscountGrpc.cs = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Protos\DiscountGrpc.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\Protos\Discount.cs = Services\Discount\Discount.Grpc\obj\Debug\net8.0\Protos\Discount.cs
+		Services\Discount\Discount.Grpc\obj\Debug\net8.0\1255d1a520d30ea4_discount.protodep = Services\Discount\Discount.Grpc\obj\Debug\net8.0\1255d1a520d30ea4_discount.protodep
+		Services\Discount\Discount.Grpc\Protos\discount.proto = Services\Discount\Discount.Grpc\Protos\discount.proto
+		Services\Discount\Discount.Grpc\Models\Coupon.cs = Services\Discount\Discount.Grpc\Models\Coupon.cs
+		Services\Discount\Discount.Grpc\Services\DiscountService.cs = Services\Discount\Discount.Grpc\Services\DiscountService.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{3B2BB268-7BD0-4DE9-9A6B-3ABD4A412372}"
 EndProject
@@ -19,6 +80,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		compose.yaml = compose.yaml
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{FCC46BD2-BFE1-46C9-9B52-8673BE086D33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Grpc", "Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{5FE0FE7C-7E27-4FDE-984C-5D623123B163}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,11 +106,17 @@ Global
 		{ACAAFF4A-0FE1-4D26-BD3D-760DD45CA999}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACAAFF4A-0FE1-4D26-BD3D-760DD45CA999}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACAAFF4A-0FE1-4D26-BD3D-760DD45CA999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE0FE7C-7E27-4FDE-984C-5D623123B163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE0FE7C-7E27-4FDE-984C-5D623123B163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE0FE7C-7E27-4FDE-984C-5D623123B163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE0FE7C-7E27-4FDE-984C-5D623123B163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3B2BB268-7BD0-4DE9-9A6B-3ABD4A412372} = {A7C52B42-2A57-4ED3-B58B-F7540F49AC9D}
 		{04BAB4C8-1C90-419B-9E70-DC5B5C14D737} = {3B2BB268-7BD0-4DE9-9A6B-3ABD4A412372}
 		{0F3EF541-71E6-4B87-A62C-E3DC5FFA219E} = {A7C52B42-2A57-4ED3-B58B-F7540F49AC9D}
 		{ACAAFF4A-0FE1-4D26-BD3D-760DD45CA999} = {0F3EF541-71E6-4B87-A62C-E3DC5FFA219E}
+		{FCC46BD2-BFE1-46C9-9B52-8673BE086D33} = {A7C52B42-2A57-4ED3-B58B-F7540F49AC9D}
+		{5FE0FE7C-7E27-4FDE-984C-5D623123B163} = {FCC46BD2-BFE1-46C9-9B52-8673BE086D33}
 	EndGlobalSection
 EndGlobal
