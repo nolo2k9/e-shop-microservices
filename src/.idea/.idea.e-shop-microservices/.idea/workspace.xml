@@ -14,24 +14,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Data/DiscountContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Data/Extentions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Discount.Grpc.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Models/Coupon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Protos/discount.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/Services/DiscountService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Discount/Discount.Grpc/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.override.yml" beforeDir="false" />
+    <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Protos/discount.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket/GetBasket/GetBasketEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket/GetBasket/GetBasketEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket/StoreBasket/StoreBasketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket/StoreBasket/StoreBasketHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-shop-microservices.sln" beforeDir="false" afterPath="$PROJECT_DIR$/e-shop-microservices.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +36,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nolo2k9"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nolo2k9/e-shop-microservices.git",
+    "accountId": "96780be1-fb9b-4d3f-a6a9-4015d39bab4f"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89c2e48006e94e89ab07a58cb2a1281a291448/ad/d93994ef/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1437688a152e32a2f23519feb8b2ca54b6fd13c2566c39accb63bd88e3037/ConfigurationOptions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,32 +80,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Basket.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Basket.API: https.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Discount.Grpc: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Discount.Grpc: https.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.../docker-compose.override.yml.distributedcache: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker...: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Basket.API/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Discount.Grpc/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.7567568&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Basket.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.Basket.API: https.executor": "Run",
+    ".NET Launch Settings Profile.Discount.Grpc: http.executor": "Run",
+    ".NET Launch Settings Profile.Discount.Grpc: https.executor": "Run",
+    "Docker.../docker-compose.override.yml.distributedcache: Compose Deployment.executor": "Run",
+    "Docker...: Compose Deployment.executor": "Run",
+    "Docker.Basket.API/Dockerfile.executor": "Run",
+    "Docker.Discount.Grpc/Dockerfile.executor": "Debug",
+    "Docker.compose.yaml: Compose Deployment.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.7567568",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Docker.Discount.Grpc/Dockerfile">
+}]]></component>
+  <component name="RunManager" selected="Docker.compose.yaml: Compose Deployment">
     <configuration name="Basket.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -322,7 +326,7 @@
       <workItem from="1750868521749" duration="1665000" />
       <workItem from="1750870201292" duration="7551000" />
       <workItem from="1750949238733" duration="7318000" />
-      <workItem from="1750956763857" duration="5124000" />
+      <workItem from="1750956763857" duration="16800000" />
     </task>
     <task id="LOCAL-00001" summary="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
       <option name="closed" value="true" />
@@ -340,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750772550661</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Set up grpc discount basket, with sql lite db">
+      <option name="closed" value="true" />
+      <created>1751025983602</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751025983602</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +374,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api" />
+    <MESSAGE value="Set up grpc discount basket, with sql lite db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up grpc discount basket, with sql lite db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -407,13 +420,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Basket/Basket.API/Basket/StoreBasket/StoreBasketHandler.cs</url>
-          <line>18</line>
+          <line>22</line>
           <properties documentPath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket/StoreBasket/StoreBasketHandler.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="800" />
+              <option value="1038" />
             </startOffsets>
             <endOffsets>
-              <option value="833" />
+              <option value="1038" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
