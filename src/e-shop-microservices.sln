@@ -64,6 +64,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A7
 		Services\Discount\Discount.Grpc\Protos\discount.proto = Services\Discount\Discount.Grpc\Protos\discount.proto
 		Services\Discount\Discount.Grpc\Models\Coupon.cs = Services\Discount\Discount.Grpc\Models\Coupon.cs
 		Services\Discount\Discount.Grpc\Services\DiscountService.cs = Services\Discount\Discount.Grpc\Services\DiscountService.cs
+		Services\Ordering\Ordering.Application\Ordering.Application.csproj = Services\Ordering\Ordering.Application\Ordering.Application.csproj
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{3B2BB268-7BD0-4DE9-9A6B-3ABD4A412372}"
@@ -84,6 +85,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{FCC46BD2-BFE1-46C9-9B52-8673BE086D33}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Grpc", "Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{5FE0FE7C-7E27-4FDE-984C-5D623123B163}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{8D571FAE-08EF-450E-AB81-F78DEC4BCAAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application", "Services\Ordering\Ordering.Application\Ordering.Application.csproj", "{CD5546A3-40DC-4179-B28C-BD21F99F7A62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Domain", "Services\Ordering\Ordering.Domain\Ordering.Domain.csproj", "{032F9FE9-63D0-44D5-A2CF-A48EEFC6B97C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{6EED3ACC-6BD8-4978-AE5C-64D9EF118E29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.API", "Services\Ordering\Ordering.API\Ordering.API.csproj", "{22EA1538-324D-4847-8919-06AC22A26DF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +121,22 @@ Global
 		{5FE0FE7C-7E27-4FDE-984C-5D623123B163}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FE0FE7C-7E27-4FDE-984C-5D623123B163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FE0FE7C-7E27-4FDE-984C-5D623123B163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD5546A3-40DC-4179-B28C-BD21F99F7A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5546A3-40DC-4179-B28C-BD21F99F7A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5546A3-40DC-4179-B28C-BD21F99F7A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD5546A3-40DC-4179-B28C-BD21F99F7A62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{032F9FE9-63D0-44D5-A2CF-A48EEFC6B97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{032F9FE9-63D0-44D5-A2CF-A48EEFC6B97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{032F9FE9-63D0-44D5-A2CF-A48EEFC6B97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{032F9FE9-63D0-44D5-A2CF-A48EEFC6B97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EED3ACC-6BD8-4978-AE5C-64D9EF118E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EED3ACC-6BD8-4978-AE5C-64D9EF118E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EED3ACC-6BD8-4978-AE5C-64D9EF118E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EED3ACC-6BD8-4978-AE5C-64D9EF118E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22EA1538-324D-4847-8919-06AC22A26DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EA1538-324D-4847-8919-06AC22A26DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EA1538-324D-4847-8919-06AC22A26DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EA1538-324D-4847-8919-06AC22A26DF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3B2BB268-7BD0-4DE9-9A6B-3ABD4A412372} = {A7C52B42-2A57-4ED3-B58B-F7540F49AC9D}
@@ -118,5 +145,10 @@ Global
 		{ACAAFF4A-0FE1-4D26-BD3D-760DD45CA999} = {0F3EF541-71E6-4B87-A62C-E3DC5FFA219E}
 		{FCC46BD2-BFE1-46C9-9B52-8673BE086D33} = {A7C52B42-2A57-4ED3-B58B-F7540F49AC9D}
 		{5FE0FE7C-7E27-4FDE-984C-5D623123B163} = {FCC46BD2-BFE1-46C9-9B52-8673BE086D33}
+		{8D571FAE-08EF-450E-AB81-F78DEC4BCAAE} = {A7C52B42-2A57-4ED3-B58B-F7540F49AC9D}
+		{CD5546A3-40DC-4179-B28C-BD21F99F7A62} = {8D571FAE-08EF-450E-AB81-F78DEC4BCAAE}
+		{032F9FE9-63D0-44D5-A2CF-A48EEFC6B97C} = {8D571FAE-08EF-450E-AB81-F78DEC4BCAAE}
+		{6EED3ACC-6BD8-4978-AE5C-64D9EF118E29} = {8D571FAE-08EF-450E-AB81-F78DEC4BCAAE}
+		{22EA1538-324D-4847-8919-06AC22A26DF9} = {8D571FAE-08EF-450E-AB81-F78DEC4BCAAE}
 	EndGlobalSection
 EndGlobal
