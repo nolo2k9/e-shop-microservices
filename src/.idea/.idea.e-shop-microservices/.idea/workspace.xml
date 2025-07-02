@@ -17,12 +17,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Events/OrderCreatedEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Events/OrderUpdatedEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/ApplicationContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Configurations/CustomerConfigurations.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Configurations/OrderConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Configurations/OrderItemConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Configurations/ProductConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/GlobalUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/GlobalUsing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Models/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +36,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "nolo2k9"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nolo2k9&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/nolo2k9/e-shop-microservices.git",
-    "accountId": "96780be1-fb9b-4d3f-a6a9-4015d39bab4f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nolo2k9/e-shop-microservices.git&quot;,
+    &quot;accountId&quot;: &quot;96780be1-fb9b-4d3f-a6a9-4015d39bab4f&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89c2e48006e94e89ab07a58cb2a1281a291448/ad/d93994ef/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1437688a152e32a2f23519feb8b2ca54b6fd13c2566c39accb63bd88e3037/ConfigurationOptions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,31 +88,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Basket.API: http.executor": "Debug",
-    ".NET Launch Settings Profile.Basket.API: https.executor": "Run",
-    ".NET Launch Settings Profile.Discount.Grpc: http.executor": "Run",
-    ".NET Launch Settings Profile.Discount.Grpc: https.executor": "Run",
-    "Docker.../docker-compose.override.yml.distributedcache: Compose Deployment.executor": "Run",
-    "Docker...: Compose Deployment.executor": "Run",
-    "Docker.Basket.API/Dockerfile.executor": "Run",
-    "Docker.Discount.Grpc/Dockerfile.executor": "Debug",
-    "Docker.compose.yaml: Compose Deployment.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.7567568",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Basket.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Basket.API: https.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Discount.Grpc: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Discount.Grpc: https.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.../docker-compose.override.yml.distributedcache: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker...: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Basket.API/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Discount.Grpc/Dockerfile.executor&quot;: &quot;Debug&quot;,
+    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.7567568&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Docker.compose.yaml: Compose Deployment">
     <configuration name="Basket.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" />
@@ -363,7 +364,8 @@
       <workItem from="1750868521749" duration="1665000" />
       <workItem from="1750870201292" duration="7551000" />
       <workItem from="1750949238733" duration="7318000" />
-      <workItem from="1750956763857" duration="40543000" />
+      <workItem from="1750956763857" duration="41310000" />
+      <workItem from="1751449443095" duration="5390000" />
     </task>
     <task id="LOCAL-00001" summary="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
       <option name="closed" value="true" />
@@ -421,7 +423,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751365960344</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Developed Order Created and Updated Domain Event in Ordering Microservices">
+      <option name="closed" value="true" />
+      <created>1751369390949</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751369390949</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +458,8 @@
     <MESSAGE value="Created Ordering Services use clean architecture and DDD" />
     <MESSAGE value="Develop Domain Modeling with DDD for Ordering Microservices" />
     <MESSAGE value="Developed Strongly typed IDs for Order Entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Developed Strongly typed IDs for Order Entities" />
+    <MESSAGE value="Developed Order Created and Updated Domain Event in Ordering Microservices" />
+    <option name="LAST_COMMIT_MESSAGE" value="Developed Order Created and Updated Domain Event in Ordering Microservices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -496,10 +507,10 @@
           <line>22</line>
           <properties documentPath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket/StoreBasket/StoreBasketHandler.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="1038" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <option value="1038" />
+              <option value="-1" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
