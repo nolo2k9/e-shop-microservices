@@ -17,9 +17,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Extensions/DatabaseExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Extensions/InitialData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/GlobalUsing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Configurations/OrderConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Configurations/OrderConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Configurations/OrderItemConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Configurations/OrderItemConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Ordering.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Ordering.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/DependencyInjection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +55,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89c2e48006e94e89ab07a58cb2a1281a291448/ad/d93994ef/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1437688a152e32a2f23519feb8b2ca54b6fd13c2566c39accb63bd88e3037/ConfigurationOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1526424be31359386c8b4c2a16f33c4f7ee3163a22274689bc8318bf599881/DocumentSessionBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/31e72e62776b9d98691e517c21aff97687f39e03d37be35513da2b6183dedf5/ArgumentOutOfRangeException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3222da496abbe1a1317bf25877e9094f1ee5c654e899857b8b5ead49bdf17c7/RequestDelegateFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5967259aff81a295fc2280e640ed76b14d29f2687882c55d5297aabd281af70/Task.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6528af51d7ce8a12f12709c25f301bc8f773a47ea35389921aed2463c15111/MessageFormatter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/798362fd3bfab2971ec9d2c99cb613724cb15eee04693d99bc121b95c17ce/ValidatorOptions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7b710f6a0201548f1aee385dbfe20b7cdd629fb378894c7978f7ca5936a28/ConfigurationExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8c79976cae66662241c131773949ac6d69b6b3dee6b8d39af0d8a2fbf21621/RedisKey.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/93662ba71a24cf231671fc237513086e59a1821924c5e87262535921e9/DocumentSessionBase.SaveChanges.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a63224c3af1f6718f95ae1ed5b4ee895a78fa5f9e3e27ea3f55efbbac2829/RelationalDatabaseFacadeExtensions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,32 +94,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Basket.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Basket.API: https.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Discount.Grpc: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Discount.Grpc: https.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.../docker-compose.override.yml.distributedcache: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker...: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Basket.API/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Discount.Grpc/Dockerfile.executor&quot;: &quot;Debug&quot;,
-    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.7567568&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Basket.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.Basket.API: https.executor": "Run",
+    ".NET Launch Settings Profile.Discount.Grpc: http.executor": "Run",
+    ".NET Launch Settings Profile.Discount.Grpc: https.executor": "Run",
+    ".NET Launch Settings Profile.Ordering.API: http.executor": "Debug",
+    "Docker.../docker-compose.override.yml.distributedcache: Compose Deployment.executor": "Run",
+    "Docker...: Compose Deployment.executor": "Run",
+    "Docker.Basket.API/Dockerfile.executor": "Run",
+    "Docker.Discount.Grpc/Dockerfile.executor": "Debug",
+    "Docker.compose.yaml: Compose Deployment.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.7567568",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Docker.compose.yaml: Compose Deployment">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Ordering.API: http">
     <configuration name="Basket.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -361,7 +372,7 @@
       <workItem from="1750870201292" duration="7551000" />
       <workItem from="1750949238733" duration="7318000" />
       <workItem from="1750956763857" duration="41310000" />
-      <workItem from="1751449443095" duration="10084000" />
+      <workItem from="1751449443095" duration="24003000" />
     </task>
     <task id="LOCAL-00001" summary="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
       <option name="closed" value="true" />
@@ -435,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751458190286</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Mapped DDD Objects to EF Entities - Developed Order Entity Configurations">
+      <option name="closed" value="true" />
+      <created>1751468108580</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751468108580</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +483,8 @@
     <MESSAGE value="Developed Strongly typed IDs for Order Entities" />
     <MESSAGE value="Developed Order Created and Updated Domain Event in Ordering Microservices" />
     <MESSAGE value="Mapped DDD Objects to EF Entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mapped DDD Objects to EF Entities" />
+    <MESSAGE value="Mapped DDD Objects to EF Entities - Developed Order Entity Configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mapped DDD Objects to EF Entities - Developed Order Entity Configurations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -584,6 +604,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Program.cs</url>
+          <line>18</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Program.cs" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="401" />
+            </startOffsets>
+            <endOffsets>
+              <option value="437" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

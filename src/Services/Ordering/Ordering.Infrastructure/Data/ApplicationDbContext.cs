@@ -1,12 +1,12 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Ordering.Domain.Models;
-
+using Ordering.Domain.ValueObjects;
 namespace Ordering.Infrastructure.Data;
 
-public class ApplicationContext : DbContext
+public class ApplicationDbContext : DbContext
 {
-    public ApplicationContext(DbContextOptions<ApplicationContext> options) 
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) 
         : base(options){}
     
     public DbSet<Customer> Customers => Set<Customer>();
@@ -16,6 +16,7 @@ public class ApplicationContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.Ignore<Address>();
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         base.OnModelCreating(builder);
     }

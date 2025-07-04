@@ -48,6 +48,15 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+  orderdb:
+    image: mcr.microsoft.com/mssql/server
+    container_name: orderdb
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password123!
+    restart: always
+    ports:
+      - "1433:1433"
 
   catalog.api:
     build:
