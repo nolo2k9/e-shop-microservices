@@ -17,15 +17,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Extensions/OrderExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByCustomer/GetOrdersByCustomerHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByCustomer/GetOrdersByCustomerQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByName/GetOrdersByNameHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByName/GetOrdersByNameQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuildingBlocks/Pagination/PaginatedRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuildingBlocks/Pagination/PaginatedResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrders/GetOrdersHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrders/GetOrdersQuery.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/AddressDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/AddressDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/GlobalUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/GlobalUsing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Ordering.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Ordering.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByCustomer/GetOrdersByCustomerHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByCustomer/GetOrdersByCustomerHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +370,7 @@
       <workItem from="1750870201292" duration="7551000" />
       <workItem from="1750949238733" duration="7318000" />
       <workItem from="1750956763857" duration="41310000" />
-      <workItem from="1751449443095" duration="59176000" />
+      <workItem from="1751449443095" duration="61607000" />
     </task>
     <task id="LOCAL-00001" summary="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
       <option name="closed" value="true" />
@@ -487,7 +484,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751903512331</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Developed GetOrdersByCustomer Queries w/ CQRS and MediatR in Ordering.Application">
+      <option name="closed" value="true" />
+      <created>1751970469245</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1751970469245</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +526,8 @@
     <MESSAGE value="Developed SaveChangesInterceptor to Auditing Entities for Order Entities" />
     <MESSAGE value=" Developed Orders CreateOrderCommand and Handler in Ordering.Application Layer" />
     <MESSAGE value="Developed Orders UpdateOrderCommand, DeleteOrderCommand and Handler using IApplicationDbContext. Developed MediatR Pipeline Behaviours (Validation, Logging) in Ordering.App, Develop Domain Event Handlers with MediatR INotificationHandler in Ordering.App" />
-    <option name="LAST_COMMIT_MESSAGE" value="Developed Orders UpdateOrderCommand, DeleteOrderCommand and Handler using IApplicationDbContext. Developed MediatR Pipeline Behaviours (Validation, Logging) in Ordering.App, Develop Domain Event Handlers with MediatR INotificationHandler in Ordering.App" />
+    <MESSAGE value="Developed GetOrdersByCustomer Queries w/ CQRS and MediatR in Ordering.Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Developed GetOrdersByCustomer Queries w/ CQRS and MediatR in Ordering.Application" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

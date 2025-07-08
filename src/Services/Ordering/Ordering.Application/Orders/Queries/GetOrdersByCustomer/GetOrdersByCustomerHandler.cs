@@ -10,7 +10,7 @@ public class GetOrdersByCustomerHandler(IApplicationDbContext dbContext) : IQuer
             .Where(o => o.CustomerId == CustomerId.Of(query.CustomerId))
             .OrderBy(o => o.OrderName.Value)
             .ToListAsync(cancellationToken);
-
+        
         return new GetOrderByCustomerResult(orders.ToOrderDtoList());
     }
 }
