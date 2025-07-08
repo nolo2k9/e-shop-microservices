@@ -17,22 +17,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Data/IApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Exceptions/OrderNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/DeleteOrder/DeleteOrderCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/DeleteOrder/DeleteOrderHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/EventHandlers/OrderCreatedEventHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/EventHandlers/OrderUpdatedEventHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Extensions/OrderExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByCustomer/GetOrdersByCustomerHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByCustomer/GetOrdersByCustomerQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByName/GetOrdersByNameHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByName/GetOrdersByNameQuery.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/DependencyInjection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/AddressDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/AddressDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/GlobalUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/GlobalUsing.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Ordering.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Ordering.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/DependencyInjection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +55,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89c2e48006e94e89ab07a58cb2a1281a291448/ad/d93994ef/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1437688a152e32a2f23519feb8b2ca54b6fd13c2566c39accb63bd88e3037/ConfigurationOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1526424be31359386c8b4c2a16f33c4f7ee3163a22274689bc8318bf599881/DocumentSessionBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20f65e79ceaad992a4c25241d6bf3582951761f90e6c362e79667f19afc/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/31e72e62776b9d98691e517c21aff97687f39e03d37be35513da2b6183dedf5/ArgumentOutOfRangeException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3222da496abbe1a1317bf25877e9094f1ee5c654e899857b8b5ead49bdf17c7/RequestDelegateFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5967259aff81a295fc2280e640ed76b14d29f2687882c55d5297aabd281af70/Task.cs" root0="FORCE_HIGHLIGHTING" />
@@ -379,7 +373,7 @@
       <workItem from="1750870201292" duration="7551000" />
       <workItem from="1750949238733" duration="7318000" />
       <workItem from="1750956763857" duration="41310000" />
-      <workItem from="1751449443095" duration="51274000" />
+      <workItem from="1751449443095" duration="59176000" />
     </task>
     <task id="LOCAL-00001" summary="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
       <option name="closed" value="true" />
@@ -485,7 +479,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751650440457</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Developed Orders UpdateOrderCommand, DeleteOrderCommand and Handler using IApplicationDbContext. Developed MediatR Pipeline Behaviours (Validation, Logging) in Ordering.App, Develop Domain Event Handlers with MediatR INotificationHandler in Ordering.App">
+      <option name="closed" value="true" />
+      <created>1751903512331</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751903512331</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +520,8 @@
     <MESSAGE value="Set up entity framework and sql db, initial seeding data" />
     <MESSAGE value="Developed SaveChangesInterceptor to Auditing Entities for Order Entities" />
     <MESSAGE value=" Developed Orders CreateOrderCommand and Handler in Ordering.Application Layer" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Developed Orders CreateOrderCommand and Handler in Ordering.Application Layer" />
+    <MESSAGE value="Developed Orders UpdateOrderCommand, DeleteOrderCommand and Handler using IApplicationDbContext. Developed MediatR Pipeline Behaviours (Validation, Logging) in Ordering.App, Develop Domain Event Handlers with MediatR INotificationHandler in Ordering.App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Developed Orders UpdateOrderCommand, DeleteOrderCommand and Handler using IApplicationDbContext. Developed MediatR Pipeline Behaviours (Validation, Logging) in Ordering.App, Develop Domain Event Handlers with MediatR INotificationHandler in Ordering.App" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
