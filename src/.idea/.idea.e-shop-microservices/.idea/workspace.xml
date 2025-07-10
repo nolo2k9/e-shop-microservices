@@ -19,14 +19,8 @@
     <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/AddressDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/AddressDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/OrderDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/OrderDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Extensions/OrderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Extensions/OrderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/DeleteOrder/DeleteOrderCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/DeleteOrder/DeleteOrderCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByName/GetOrdersByNameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByName/GetOrdersByNameHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Models/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Ordering.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Ordering.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +107,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.85903084",
+    "XThreadsFramesViewSplitterKey": "0.78313255",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -376,7 +370,7 @@
       <workItem from="1750870201292" duration="7551000" />
       <workItem from="1750949238733" duration="7318000" />
       <workItem from="1750956763857" duration="41310000" />
-      <workItem from="1751449443095" duration="83821000" />
+      <workItem from="1751449443095" duration="85107000" />
     </task>
     <task id="LOCAL-00001" summary="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
       <option name="closed" value="true" />
@@ -514,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751983172845</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Developed GetOrders Endpoint w/ Pagination for REST APIs in Ordering.API Layer. Added in exception handling from custom exception handler">
+      <option name="closed" value="true" />
+      <created>1752148632229</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1752148632229</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +553,8 @@
     <MESSAGE value="Developed GetOrdersByCustomer Queries w/ CQRS and MediatR in Ordering.Application" />
     <MESSAGE value=" Developed GetOrders Query applyied Pagination using CQRS and MediatR in Ordering.App" />
     <MESSAGE value="Developed update order, create order, delete order etc Endpoints for rest Apis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Developed update order, create order, delete order etc Endpoints for rest Apis" />
+    <MESSAGE value="Developed GetOrders Endpoint w/ Pagination for REST APIs in Ordering.API Layer. Added in exception handling from custom exception handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Developed GetOrders Endpoint w/ Pagination for REST APIs in Ordering.API Layer. Added in exception handling from custom exception handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
