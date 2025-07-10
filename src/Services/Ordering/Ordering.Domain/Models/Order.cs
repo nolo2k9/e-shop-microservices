@@ -30,7 +30,7 @@ public class Order : Aggregate<OrderId>
             ShippingAddress = shippingAddress,
             BillingAddress = billingAddress,
             Payment = payment,
-            Status = OrderStatus.Pending,
+            Status = status,
         };
         
         order.AddDomainEvent(new OrderCreatedEvent(order));

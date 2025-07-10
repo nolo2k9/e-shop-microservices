@@ -17,16 +17,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/CreateOrder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/DeleteOrder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrders.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrdersByCustomer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrdersByName.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/UpdateOrder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/GlobalUsing.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Ordering.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Ordering.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/AddressDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/AddressDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/OrderDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Dtos/OrderDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Extensions/OrderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Extensions/OrderExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/DeleteOrder/DeleteOrderCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/DeleteOrder/DeleteOrderCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByName/GetOrdersByNameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrdersByName/GetOrdersByNameHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.Domain/Models/Order.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +69,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a7fe638b8770ba58891062f26d93eadeccbdd9eca971b52f884987271beeefc0/PropertyChain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b45040d1d5783fc65c68f446c337eed236761ac37e70e7d6bb618f32364e8/EndPointCollection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d23f1950135a17d245a1a198c84822233f80fabcbea418746e0657f265d1c69/TypeExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df6ecc3a2f73aa6c2e4c935eb66e23191bcbbefd34be6244af449299ed894ac3/ValueTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ecfc69314ec4c0c0f6b4c4c95f99652b39f8def19dbd22d6fddf716ad152fa/IValidationContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Discount/Discount.Grpc/Models/Coupon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Discount/Discount.Grpc/Program.cs" root0="SKIP_HIGHLIGHTING" />
@@ -102,7 +103,8 @@
     ".NET Launch Settings Profile.Basket.API: https.executor": "Run",
     ".NET Launch Settings Profile.Discount.Grpc: http.executor": "Run",
     ".NET Launch Settings Profile.Discount.Grpc: https.executor": "Run",
-    ".NET Launch Settings Profile.Ordering.API: http.executor": "Run",
+    ".NET Launch Settings Profile.Ordering.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.Ordering.API: https.executor": "Debug",
     "Docker.../docker-compose.override.yml.distributedcache: Compose Deployment.executor": "Run",
     "Docker...: Compose Deployment.executor": "Run",
     "Docker.Basket.API/Dockerfile.executor": "Run",
@@ -111,7 +113,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.7567568",
+    "XThreadsFramesViewSplitterKey": "0.85903084",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -122,7 +124,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Ordering.API: http">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Ordering.API: https">
     <configuration name="Basket.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -374,7 +376,7 @@
       <workItem from="1750870201292" duration="7551000" />
       <workItem from="1750949238733" duration="7318000" />
       <workItem from="1750956763857" duration="41310000" />
-      <workItem from="1751449443095" duration="69488000" />
+      <workItem from="1751449443095" duration="83821000" />
     </task>
     <task id="LOCAL-00001" summary="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
       <option name="closed" value="true" />
@@ -504,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751973276952</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Developed update order, create order, delete order etc Endpoints for rest Apis">
+      <option name="closed" value="true" />
+      <created>1751983172845</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1751983172845</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +550,8 @@
     <MESSAGE value="Developed Orders UpdateOrderCommand, DeleteOrderCommand and Handler using IApplicationDbContext. Developed MediatR Pipeline Behaviours (Validation, Logging) in Ordering.App, Develop Domain Event Handlers with MediatR INotificationHandler in Ordering.App" />
     <MESSAGE value="Developed GetOrdersByCustomer Queries w/ CQRS and MediatR in Ordering.Application" />
     <MESSAGE value=" Developed GetOrders Query applyied Pagination using CQRS and MediatR in Ordering.App" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Developed GetOrders Query applyied Pagination using CQRS and MediatR in Ordering.App" />
+    <MESSAGE value="Developed update order, create order, delete order etc Endpoints for rest Apis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Developed update order, create order, delete order etc Endpoints for rest Apis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -662,17 +673,251 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Program.cs</url>
-          <line>18</line>
-          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Program.cs" containingFunctionPresentation="">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/CreateOrder.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/CreateOrder.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
             <startOffsets>
-              <option value="401" />
+              <option value="399" />
             </startOffsets>
             <endOffsets>
-              <option value="437" />
+              <option value="449" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/CreateOrder.cs</url>
+          <line>18</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/CreateOrder.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="593" />
+            </startOffsets>
+            <endOffsets>
+              <option value="652" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs</url>
+          <line>17</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs" containingFunctionPresentation="Method 'CreateNewOrder'">
+            <startOffsets>
+              <option value="583" />
+            </startOffsets>
+            <endOffsets>
+              <option value="865" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderCommand.cs</url>
+          <line>15</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderCommand.cs" containingFunctionPresentation="Constructor 'CreateOrderCommandValidator'">
+            <startOffsets>
+              <option value="400" />
+            </startOffsets>
+            <endOffsets>
+              <option value="476" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs</url>
+          <line>7</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/CreateOrderHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="305" />
+            </startOffsets>
+            <endOffsets>
+              <option value="347" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Interceptor/DispatchDomainEventInterceptor.cs</url>
+          <line>8</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Interceptor/DispatchDomainEventInterceptor.cs" containingFunctionPresentation="Method 'SavingChanges'">
+            <startOffsets>
+              <option value="294" />
+            </startOffsets>
+            <endOffsets>
+              <option value="359" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Interceptor/DispatchDomainEventInterceptor.cs</url>
+          <line>15</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Interceptor/DispatchDomainEventInterceptor.cs" containingFunctionPresentation="Method 'SavingChangesAsync'">
+            <startOffsets>
+              <option value="649" />
+            </startOffsets>
+            <endOffsets>
+              <option value="695" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Interceptor/DispatchDomainEventInterceptor.cs</url>
+          <line>21</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Infrastructure/Data/Interceptor/DispatchDomainEventInterceptor.cs" containingFunctionPresentation="Method 'DispatchDomainEvents'">
+            <startOffsets>
+              <option value="863" />
+            </startOffsets>
+            <endOffsets>
+              <option value="883" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/EventHandlers/OrderCreatedEventHandler.cs</url>
+          <line>11</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/EventHandlers/OrderCreatedEventHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="371" />
+            </startOffsets>
+            <endOffsets>
+              <option value="461" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderHandler.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderHandler.cs" containingFunctionPresentation="Method 'UpdateOrderWithNewValues'">
+            <startOffsets>
+              <option value="905" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1193" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderCommand.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Commands/UpdateOrder/UpdateOrderCommand.cs" containingFunctionPresentation="Constructor 'UpdateOrderCommandValidator'">
+            <startOffsets>
+              <option value="354" />
+            </startOffsets>
+            <endOffsets>
+              <option value="417" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/EventHandlers/OrderUpdatedEventHandler.cs</url>
+          <line>6</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/EventHandlers/OrderUpdatedEventHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="289" />
+            </startOffsets>
+            <endOffsets>
+              <option value="379" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrders.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrders.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="474" />
+            </startOffsets>
+            <endOffsets>
+              <option value="534" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrders.cs</url>
+          <line>16</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrders.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="621" />
+            </startOffsets>
+            <endOffsets>
+              <option value="649" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrders/GetOrdersHandler.cs</url>
+          <line>9</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/Queries/GetOrders/GetOrdersHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="330" />
+            </startOffsets>
+            <endOffsets>
+              <option value="379" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrdersByName.cs</url>
+          <line>12</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/GetOrdersByName.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="430" />
+            </startOffsets>
+            <endOffsets>
+              <option value="498" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/DeleteOrder.cs</url>
+          <line>17</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/DeleteOrder.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="534" />
+            </startOffsets>
+            <endOffsets>
+              <option value="562" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/DeleteOrder.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/Endpoints/DeleteOrder.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="388" />
+            </startOffsets>
+            <endOffsets>
+              <option value="447" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/DeleteOrder/DeleteOrderHandler.cs</url>
+          <line>9</line>
+          <properties documentPath="$PROJECT_DIR$/Services/Ordering/Ordering.Application/Orders/DeleteOrder/DeleteOrderHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="329" />
+            </startOffsets>
+            <endOffsets>
+              <option value="371" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

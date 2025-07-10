@@ -7,7 +7,7 @@ public record OrderDto (
     Guid CustomerId,
     string OrderName,
     AddressDto ShippingAddress,
-    AddressDto BillingAddress,
+    AddressDto? BillingAddress,
     PaymentDto Payment,
     OrderStatus Status,
     List<OrderItemDto> OrderItems
