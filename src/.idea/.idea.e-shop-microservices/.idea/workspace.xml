@@ -17,15 +17,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a27aee-19f6-4f14-8773-e0dd7a39a5a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/BuildingBlocks.Messaging.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/Events/BasketCheckoutEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/Events/IntegrationEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/MassTransit/Extensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket/CheckoutBasket/CheckoutBasketEndpoints.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket/CheckoutBasket/CheckoutBasketHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Dtos/BasketCheckoutDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.e-shop-microservices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuildingBlocks/BuildingBlocks.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BuildingBlocks/BuildingBlocks.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Ordering/Ordering.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Ordering/Ordering.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-shop-microservices.sln" beforeDir="false" afterPath="$PROJECT_DIR$/e-shop-microservices.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/Events/BasketCheckoutEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/Events/BasketCheckoutEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/GlobalUsing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/GlobalUsing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Basket/Basket.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Basket/Basket.API/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fa3c38df4154b449282fdf6641e3017d83800/25/0ff8ef4d/IEquatable`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89c2e48006e94e89ab07a58cb2a1281a291448/ad/d93994ef/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99afbc8d096f4832b495a99918b5f7a829a00/b6/c43bdf2c/TypeAdapter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1437688a152e32a2f23519feb8b2ca54b6fd13c2566c39accb63bd88e3037/ConfigurationOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1526424be31359386c8b4c2a16f33c4f7ee3163a22274689bc8318bf599881/DocumentSessionBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20f65e79ceaad992a4c25241d6bf3582951761f90e6c362e79667f19afc/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -73,6 +73,7 @@
     <setting file="file://$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/Events/BasketCheckoutEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/Events/IntegrationEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BuildingBlocks.Messaging/BuildingBlocks.Messaging/MassTransit/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/KeithNolan/e-shop-microservices/e-shop-microservices/src/Services/Basket/Basket.API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Discount/Discount.Grpc/Models/Coupon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Discount/Discount.Grpc/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Discount/Discount.Grpc/Services/DiscountService.cs" root0="SKIP_HIGHLIGHTING" />
@@ -101,7 +102,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.Basket.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.Basket.API: http.executor": "Run",
     ".NET Launch Settings Profile.Basket.API: https.executor": "Run",
     ".NET Launch Settings Profile.Discount.Grpc: http.executor": "Run",
     ".NET Launch Settings Profile.Discount.Grpc: https.executor": "Run",
@@ -126,7 +127,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Ordering.API: https">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Basket.API: http">
     <configuration name="Basket.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Basket/Basket.API/Basket.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -378,7 +379,7 @@
       <workItem from="1750870201292" duration="7551000" />
       <workItem from="1750949238733" duration="7318000" />
       <workItem from="1750956763857" duration="41310000" />
-      <workItem from="1751449443095" duration="90168000" />
+      <workItem from="1751449443095" duration="98558000" />
     </task>
     <task id="LOCAL-00001" summary="Set up minimal apis, vertical slice, cqrs implementation, repository pattern, postgres with marten library for basket Api">
       <option name="closed" value="true" />
@@ -532,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752152133713</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Setting up rabbit mq with buildingblocks.messaging">
+      <option name="closed" value="true" />
+      <created>1752245676052</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1752245676052</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,7 +580,8 @@
     <MESSAGE value="Developed update order, create order, delete order etc Endpoints for rest Apis" />
     <MESSAGE value="Developed GetOrders Endpoint w/ Pagination for REST APIs in Ordering.API Layer. Added in exception handling from custom exception handler" />
     <MESSAGE value="Added health checks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added health checks" />
+    <MESSAGE value="Setting up rabbit mq with buildingblocks.messaging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up rabbit mq with buildingblocks.messaging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
